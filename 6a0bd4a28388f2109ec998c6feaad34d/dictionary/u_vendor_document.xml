@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="fefe5ce68388f2109ec998c6feaad3df" max_length="40" name="u_vendor_document" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" default="_w9" label="Document type " max_length="40" name="u_document_type" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Comments (String)" max_length="40" name="u_comments_string" type="string"/>
+        <element label="Received (Boolean)" max_length="40" name="u_received_boolean" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="u_number" type="string"/>
+        <element label="Is required (Boolean)" max_length="40" name="u_is_required_boolean" type="boolean"/>
+        <element attributes="encode_utf8=false" label="Request " max_length="32" name="u_request" reference="u_vendor_onboarding" type="reference"/>
+        <element label="Verified (Boolean)" max_length="40" name="u_verified_boolean" type="boolean"/>
+        <index name="index">
+            <element name="u_request"/>
+        </index>
+    </element>
+</database>

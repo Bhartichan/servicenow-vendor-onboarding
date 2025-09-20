@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="a54e5ca68388f2109ec998c6feaad3f0" max_length="40" name="u_vendor_onboarding" type="collection">
+        <element label="Address " max_length="65536" name="u_address" type="html"/>
+        <element attributes="edge_encryption_enabled=true" label="Country (String)" max_length="40" name="u_country_string" type="string"/>
+        <element attributes="encode_utf8=false" label="Assigned to (Group reference)" max_length="32" name="u_assigned_to_group_reference" reference="sys_user_group" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Notes (Journal input)" max_length="4000" name="u_notes_journal_input" type="journal"/>
+        <element attributes="edge_encryption_enabled=true" label="Phone (String)" max_length="40" name="u_phone_string" type="string"/>
+        <element attributes="encode_utf8=false" label="Controller (User reference)" max_length="32" name="u_controller_user_reference" reference="sys_user" type="reference"/>
+        <element label="Primary contact email (Email)" max_length="40" name="u_primary_contact_email_email" type="email"/>
+        <element attributes="edge_encryption_enabled=true" label="Tax ID / TIN (String)" max_length="40" name="u_tax_id_tin_string" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Vendor name" max_length="40" name="u_vendor_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="draft" label="Status " max_length="40" name="u_status" type="string">
+            <choice/>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" default="national" label="Vendor type (Choice: National, International)" max_length="40" name="u_vendor_type_choice_national_international" type="string">
+            <choice/>
+        </element>
+        <element attributes="encode_utf8=false" label="Requested for" max_length="32" name="u_requested_for" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Primary contact name (String)" max_length="40" name="u_primary_contact_name_string" type="string"/>
+        <index name="index">
+            <element name="u_assigned_to_group_reference"/>
+        </index>
+        <index name="index2">
+            <element name="u_controller_user_reference"/>
+        </index>
+        <index name="index3">
+            <element name="u_requested_for"/>
+        </index>
+    </element>
+</database>

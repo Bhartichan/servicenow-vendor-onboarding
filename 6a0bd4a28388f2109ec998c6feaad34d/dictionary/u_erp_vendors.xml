@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="09cfdc2a8388f2109ec998c6feaad34d" max_length="40" name="u_erp_vendors" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" default="active" label="Status" max_length="40" name="u_status" type="string">
+            <choice/>
+        </element>
+        <element attributes="encode_utf8=false" label="Created from request (Reference: Vendor Onboarding Request)" max_length="32" name="u_created_from_request_reference_vendor_onboarding_request" reference="u_vendor_onboarding" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Vendor name" max_length="40" name="u_vendor_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Number (Auto-number → Vendor ID)" max_length="40" name="u_number_auto_number_vendor_id" type="string"/>
+    </element>
+</database>
